@@ -1,0 +1,811 @@
+@charset "UTF-8";
+
+/*getting started stylesheet*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+The reset CSS overrides all the style rules applied by the browser stylesheet.
+If you don't want to reset all CSS values then comment the reset rules out*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*end of reset style rules---------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+@font-face { font-family: wrestleFont; src: url('fonts/wrestle.ttf'); }
+
+
+/*default rule for all elements*/
+body {
+	background-color: black;
+	font-family: "Arial";
+	color: #fff;
+	font-size: 0.9em;
+	line-height: 1.2em;
+    background: url(images/bg2.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    
+/*page section elements-----------------------------------------------------*/
+#wrapper {/*styles wrapper content*/
+	width: 70%;
+    /*centres wrapper content on the screen: */
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 2em;
+	padding-right: 2em;
+    background-image: url("images/wrapbg.png");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    min-height: 1080px;
+	overflow:hidden;
+}
+
+main{
+    /*float: left;*/
+}
+
+footer {
+    clear: both;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    text-align: center;
+}
+
+#header {
+    max-height: 30em;
+    max-width: 100%;
+    float: center;
+}
+
+/*menu elements------------------------------------------------------------*/
+
+#menu{
+    background: black;
+    color:red;
+    float: right;
+    border: none;
+    margin: 0.15em;
+}
+
+#menu .ui-menu{
+    background: black;
+    color:red;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#menu .ui-menu-item{
+    background: black;
+    color: white;
+    border: outset silver;
+}
+#menu .ui-menu-item:hover{
+    box-shadow: 0 0 1em silver;
+    text-shadow: 0 0 1em red;
+    color: red;
+}
+#menu .ui-menu-item:active{
+    border: inset silver;
+    box-shadow: 0 0 1em red;
+    text-shadow: 0 0 1em red;
+}
+
+.mainItem{
+    font-family: wrestleFont;
+}
+
+nav{
+    min-width: 93%;
+    min-height: 2.3em;
+    margin: 1em;
+    display: none;
+    border: 1px red;
+    border-style: groove;
+    box-shadow: 0 0 1em red;
+}
+
+.mainItem{
+    display: inline-block;
+    width: 10em;
+}
+
+/*card stuff */
+
+
+
+.trump {
+
+    height: 26em;
+    width: 16em;
+    background: black;
+    padding: 6px;
+    text-align: left;
+    border-radius: 15px;
+    border: white solid 2px;
+    border-radius: 13px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 3px 3px 2px black;
+    float: left;
+}
+
+.bigTrump{
+    height: 27em;
+    width: 17em;
+    background: black;
+    padding: 6px;
+    margin-top: 2em;
+    margin-left: 2em;
+    text-align: left;
+    border-radius: 15px;
+    border: white solid 2px;
+    border-radius: 13px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 3px 3px 2px black;
+    float: left;
+}
+
+.wrestler{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0.5em;
+    border-radius: 15px;
+}
+.wrestler:hover, .wrestler:active { 
+    box-shadow: 0 0 1em white;
+}
+
+.trumpinfo {
+    position:absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    bottom: 13px;
+    left: 13px;
+    color: white;
+    z-index: 3;
+}
+
+.trumpcover {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 30%;
+    height: 100%;
+    width: 100%;
+    z-index: 1.5;
+}
+
+.minilogo {
+    position: absolute;
+    max-width: 45%;
+    top: 7px;
+    left: 5px;
+    z-index: 3;
+}
+
+.name {
+    font-family: wrestleFont;
+    color: red;
+    font-size: 1.7em;
+    text-shadow: 0 0 0.3em black, 0 0 0.5em black;
+}
+
+.trumpborder {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width: 100%;
+    z-index: 2.5;
+}
+#SPECIALreview{
+	position:relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+	max-width: 30px;
+	min-width:30px;
+	max-height:50px;
+    left: 230px;
+	bottom: 165px;
+	color: white;
+    
+	
+
+}
+/* wrestler stuff */
+
+#chewpacrema{
+    background-image: url(images/chewpacrema.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#chewpacrema2{
+    background-image: url(images/chewpacrema.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#DisgruntledCareBear{
+    background-image: url(images/DisgruntledCareBear.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#DisgruntledCareBear2{
+    background-image: url(images/DisgruntledCareBear.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#bearbarian{
+    background-image: url(images/Bearbarian.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#bearbarian2{
+    background-image: url(images/Bearbarian.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#crimsonLightening{
+    background-image: url(images/CrimsonLightening.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#crimsonLightening2{
+    background-image: url(images/CrimsonLightening.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#dicktatoe{
+    background-image: url(images/DickTatoe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#dicktatoe2{
+    background-image: url(images/DickTatoe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#gladis{
+    background-image: url(images/Gladis.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#gladis2{
+    background-image: url(images/Gladis.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#jackattack{
+    background-image: url(images/JackAttack.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#jackattack2{
+    background-image: url(images/JackAttack.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#mcbobald{
+    background-image: url(images/JonaldMcBobald.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#mcbobald2{
+    background-image: url(images/JonaldMcBobald.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#juansinna{
+    background-image: url(images/JuanSiNa.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display:none;
+}
+#juansinna2{
+    background-image: url(images/JuanSiNa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#psychocircus{
+    background-image: url(images/PsychoCirucs.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#psychocircus2{
+    background-image: url(images/PsychoCirucs.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#redmistress{
+    background-image: url(images/RedMistress.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#redmistress2{
+    background-image: url(images/RedMistress.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#silverhorde{
+    background-image: url(images/SilverHorde.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#silverhorde2{
+    background-image: url(images/SilverHorde.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+    
+#muscle{
+    background-image: url(images/TheMuscle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#muscle2{
+    background-image: url(images/TheMuscle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#unclemidas{
+    background-image: url(images/UncleMidas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:none;
+}
+#unclemidas2{
+    background-image: url(images/UncleMidas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+#whisperingdeath{
+    background-image: url(images/WhisperingDeath.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#whisperingdeath2{
+    background-image: url(images/WhisperingDeath.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:none;
+}
+
+/* empty div for control panel image */
+
+
+/*text styles--------------------------------------------------------------*/
+
+#formTitle{
+    font-family: wrestleFont;
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* forms ----------------------------------------------------------------*/
+.buttons{
+    font-family: wrestleFont;
+    font-size: 1.2em;
+    background:black;
+    background-size:cover;
+    color: #fff;
+    padding: 0.5em;
+    border: outset red;
+	-moz-box-shadow: 0 0 0.7em red;
+	-webkit-box-shadow: 0 0 0.7em red;
+	box-shadow: 0 0 0.7em red; /*uses the drop shadow to create a glow around the fieldset boxes*/
+    min-width: 6em;
+    height 2em;
+    margin-left: 1em;
+}
+.buttons:hover, .button:active {
+    box-shadow: 0 0 0.7em silver;
+}
+.button:active {
+    border: inset red;
+    color: red;
+}
+
+fieldset { /* styles fieldset to destiguish between each of them*/
+    border: 1px solid red;
+	-moz-box-shadow: 0 0 0.7em red;
+	-webkit-box-shadow: 0 0 0.7em red;
+	box-shadow: 0 0 0.7em red; /*uses the drop shadow to create a glow around the fieldset boxes*/
+    margin: 1em;
+    clear:both; /* clears all floats*/
+    color: red;
+    background-color: black;
+    padding: 0.5em;
+    width: 81%;
+}
+
+#form, .register, .login, #logSubmit #regSubmit{
+    display: none;
+}
+
+input { /*styles the input boxes*/
+    background-color: black;
+    color: white;
+    margin: 0.2em;
+    padding: 5px 5px 5px 20px;
+    border: groove silver;
+}
+
+.title { /*styles the labels */
+    font-family: wrestleFont;
+    font-size: 1.5em;
+    float:left; /*makes the labels float to the left of the corresponding input boxes */
+    margin:0.2em;
+    width: 10em; /*sets the width of the label so all labels and input boxes are aligned perfectly*/
+}
+
+legend {
+    margin:1em;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 3px 3px 3px 3px #000;
+    background: black;
+}
+
+input.name{/*targets the name input and applies an image background*/
+    font-family: "arial";
+    font-size: 0.9em;
+    background-image: url(images/name.png);
+    background-repeat: no-repeat;
+}
+
+input#lastName{/*targets the name input and applies an image background*/
+    background-image: url(images/name.png);
+    background-repeat: no-repeat;
+}
+
+input#password{ /*targets the password input and applies an image background*/
+    background-image: url(images/pass.gif);
+    background-repeat: no-repeat;
+}
+
+input#conPassword{ /*targets the password input and applies an image background*/
+    background-image: url(images/pass.gif);
+    background-repeat: no-repeat;
+}
+
+textarea#text{ /*targets the textarea input and applies an image background*/
+    background-image: url(images/text.gif);
+    background-repeat: no-repeat;
+}
+
+.enterText{
+    border: 1px solid red;
+	-moz-box-shadow: 0 0 0.7em red;
+	-webkit-box-shadow: 0 0 0.7em red;
+	box-shadow: 0 0 0.7em red; /*uses the drop shadow to create a glow around the fieldset boxes*/
+    color: white;
+    background-color: black;
+    margin-left: 1em;    
+    width: 80%;
+    height: 2em;
+}
+
+#loginBtn{
+    float: left;
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+#or{
+    float: left;
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-bottom: 1em;
+}
+
+#regBtn{
+    float: left;
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+#loginFormDiv{
+    margin: 2em;
+}
+
+#reviewform{
+    width: 58%;
+    float: right;
+    display: none;
+}
+
+textarea{
+    width: 90%;
+    padding-left: 5%;
+}
+
+.commentBtn{
+font-family: wrestleFont;
+    font-size: 0.5em;
+    background:black;
+    background-size:cover;
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
+    border: outset red;
+	-moz-box-shadow: 0 0 0.7em red;
+	-webkit-box-shadow: 0 0 0.7em red;
+	box-shadow: 0 0 0.7em red; /*uses the drop shadow to create a glow around the fieldset boxes*/
+    min-width: 6em;
+    height 2em;
+    margin-left: 4em;
+}
+.commentBtn:hover, .commentBtn:active {
+    box-shadow: 0 0 0.7em silver;
+}
+.commentBtn:active {
+    border: inset red;
+    color: red;
+}
+
+/*ABOUT PAGE----------------------------------------------------------------*/
+.wrestlerBio{
+    width: 60%;
+    float: right;
+    margin: 2em;
+    display: none;
+    border: red;
+    box-shadow: 0 0 0.7em red; 
+    padding: 0.5em;
+    
+}
+
+.wrestlerBio, p{
+	font-family: "Arial";
+	color: silver;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+	font-size:0.6em;
+	line-height:1em;
+}
+
+#aboutPage{
+    width: 58%;
+    float: right;
+    margin: 2em;
+    display: none;
+}
+
+#aboutPage h1 {
+    margin: 1em;
+    font-family: wrestleFont;
+    color: silver;
+    font-size: 2.2em;
+    line-height: 0.7em;
+}
+
+#aboutPage h2, .wrestlerBio{
+    margin: 1em;
+    font-family: wrestleFont;
+    color: red;
+    font-size: 2em;
+}
+
+#aboutPage p{
+	font-size: 1.5em;
+	line-height: 1.5em;
+	text-align: justify;
+}
+
+#chewieDiv{
+    width: 30%;
+    float: left;
+    margin: 2em;
+    position: relative;
+    display: none;
+}
+
+#chewietxt{
+    position: absolute;
+    bottom: 10px;
+    font-family: wrestleFont;
+    color: red;
+    font-size: 3em;
+    text-shadow: 0 0 0.1em black, 0 0 0.3em black, 0 0 0.2em black, 0 0 0.4em black;
+    
+}
+
+
+
+/*sliders-----------------------------------------------------------------*/
+
+.slider{
+    border: 1px solid silver;
+    background: black;
+    height: 0.3em;
+    margin: 0.1em;
+    width: 50%;
+}
+
+.slider .ui-slider-handle{
+    background: black;
+
+    border: 1px solid red;
+    width:0.4em;
+    height: 0.7em;
+    box-shadow: 0 0 0.7em red;
+}
+
+#sliders .value{
+    width: 1em;
+    height:1em;
+    padding: 0.1em;
+}
+
+#sliders .title{
+    margin-top: 0.6em;
+    font-size: 1em
+    
+}
+
+#sliders{
+    float: left;
+    width: 100%;
+    margin-left: 1em;
+}
+
+.total{
+    float: right;
+    font-size: 3em;
+    font-family: wrestleFont;
+    color: silver;
+    padding-bottom: 3em;
+    margin-right: 2em;
+}
+
+/*comments-----------------------------------------------------------------*/
+
+#commentHole{
+	width: 90%;
+	border: groove red;
+	box-shadow: 0 0 0.7em red;
+	float: left;
+	margin: 2em;
+	padding: 1em;
+}
+
+#commentHole .users {
+	font-family: wrestleFont;
+	color: red;
+	font-size: 1em;
+	margin-top: 0.5em;
+	width: 100%;
+	padding-top: 0.2em;
+	border-top: 1px dashed #630000;
+}
+
+#userReviews{
+	font-family: wrestleFont;
+	color: silver;
+	font-size: 1.2em;
+}
+
+
+/* images ---------------------------------------------------*/
+

@@ -1,0 +1,131 @@
+<!doctype html>
+<!--HTML5 doctype declaration -->
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <!--metadata-->
+    <title>Wrastlers</title>
+    <!--title of page shown in browser bar-->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="jqueryUi/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jqueryUi/jquery-ui.min.css">
+    <script src="jqueryUi/jquery.animateSprite.js"></script>
+
+
+    <script type="text/javascript" src="script.js"></script>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <!--imports stylesheet-->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!--applies favicon/icon to the url bar-->
+
+
+</head>
+
+<body>
+    <!--body element where whole page content goes-->
+
+
+    <div id="wrapper">
+        <!--The 'wrapper' div contains all the page content and can be styled -->
+
+        <main>
+
+            <header>
+                <img src="images/wrestleinsania.png" id="header" alt="WrestleInsania" />
+            </header>
+
+            <nav>
+                <ul id="menu">
+                    <li class="mainItem" id="homeBtn">Home</li>
+                    <li class="mainItem" id="wrestlersBtn">Wrestlers
+                        <ul>
+                            <li id="chewBtn">Chewpacrema</li>
+                            <li id="carebearBtn">Disgruntled Care Bear</li>
+                            <li id="bearbarBtn">Bearbarian</li>
+                            <li id="crimsonBtn">Crimson Lightening</li>
+                            <li id="dickBtn">Dicktatoe</li>
+                            <li id="gladBtn">Gladis</li>
+                            <li id="jonaldBtn">Jonald Mcbobald</li>
+                            <li id="attackBtn">Jack Attack</li>
+                            <li id="juanBtn">Juan Si Na</li>
+                            <li id="psychoBtn">Psycho Circus</li>
+                            <li id="mistressBtn">Red-Mistress</li>
+                            <li id="silverBtn">SilverHorde</li>
+                            <li id="mcclellanBtn">Jon the Muscle McClellan</li>
+                            <li id="midasBtn">Uncle Midas</li>
+                            <li id="deathBtn">Whispering Death</li>
+                        </ul>
+                    </li>
+                    <li class="mainItem" id="logoutBtn">Logout</li>
+                </ul>
+            </nav>
+
+            <div id="loginFormDiv">
+
+                <fieldset id="btns">
+                    <legend id="formTitle">Do you wish to Login or Register? </legend>
+                    <div>
+                        <button id="loginBtn" class="buttons">Login</button>
+                        <div id="or">
+                            <p>or</p>
+                        </div>
+                        <button id="regBtn" class="buttons">Register</button>
+                    </div>
+                </fieldset>
+
+
+                <form name="form" id="form">
+                    <fieldset>
+                        <legend id="formTitle">Login Details</legend>
+                        <div class="login">
+                            <label for="username" class="title">Username:</label>
+                            <input type="text" id="username" class="name" name="username" placeholder="Username" required="required">
+                        </div>
+                        <div class="login">
+                            <label for="password" class="title">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="Password" required="required">
+                        </div>
+                        <div id="reg">
+                            <div class="register">
+                                <label for="password" id="confirmTitle" class="title">Confirm:</label>
+                                <input type="password" id="conPassword" name="conPassword" placeholder="Password" required="required">
+                            </div>
+                            <div class="register">
+                                <label for="displayName" id="displayTitle" class="title">Display Name:</label>
+                                <input type="text" id="displayName" class="name" name="displayName" placeholder="Display Name" required="required">
+                            </div>
+                            <div class="submit">
+                                <input type="button" value="Register" id="regSubmit" class="buttons">
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <input type="button" value="Login" id="logSubmit" class="buttons">
+                        </div>
+                        <div class="submit">
+                            <input type="button" value="Restart" id="restart" class="buttons">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div id="wrestlers"></div>
+
+
+        </main>
+        <!--Close main page content -->
+
+        <footer class="bottom">
+            <!--Footer content -->
+            <small>2015, L. Marquick, J. O'Neill, S. Plume, C. Spreadbury &amp; J. Sleath </small>
+        </footer>
+
+    </div>
+    <!--Close 'wrapper' div -->
+</body>
+<!--Close 'body' -->
+
+</html>
